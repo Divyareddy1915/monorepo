@@ -1,0 +1,25 @@
+/* Your styles goes here. */
+.tile {
+    float: left;
+    width: 21%;
+    padding: 10px;
+    margin:20px;
+    height: 250px;
+    background-color:#239d97;
+  }
+
+  .tile-text {
+    text-align:center;
+    font-size:30px;
+  }
+
+  .tile-desc {
+    text-align: center;
+    font-size:20px;
+  }
+
+  .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
