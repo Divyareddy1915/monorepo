@@ -1,17 +1,8 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import App from './App';
 
-import App from './app';
-
-describe('App', () => {
-  it('should render successfully', () => {
-    const { baseElement } = render(<App />);
-
-    expect(baseElement).toBeTruthy();
-  });
-
-  it('should have a greeting as the title', () => {
-    const { getByText } = render(<App />);
-
-    expect(getByText(/Welcome migration/gi)).toBeTruthy();
-  });
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
 });
