@@ -5,7 +5,7 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/webpack:webpack",
+      "executor": "./dist/libs/my-plugin:echo",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {

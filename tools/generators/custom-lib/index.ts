@@ -7,6 +7,10 @@ import {
   readProjectConfiguration,
   generateFiles,
   joinPathFragments,
+  addDependenciesToPackageJson,
+  addProjectConfiguration,
+  updateProjectConfiguration,
+  targetToTargetString,
 } from '@nrwl/devkit';
 import { libraryGenerator } from '@nrwl/workspace/generators';
 import { InterfaceSchema } from './schema';
@@ -19,10 +23,6 @@ export default async function (tree: Tree, schema: InterfaceSchema) {
     names(schema.name).fileName
   ).root;
 
-  const libSrc = readProjectConfiguration(
-    tree,
-    names(schema.name).fileName
-  ).sourceRoot;
   // generate different name variations for substitutions
   const interfaceNames = names(schema.name);
 
@@ -36,12 +36,29 @@ export default async function (tree: Tree, schema: InterfaceSchema) {
   //delete files generated through built in generators
   tree.delete(joinPathFragments(libRoot, 'tsconfig.spec.json'));
 
+  //add dependency in package.json
+  // addDependenciesToPackageJson(tree, { react: 'latest' }, { jest: 'latest' });
+
+
   await generateFiles(
     tree,
     joinPathFragments(__dirname, './files'),
     `${libRoot}`,
     substitutions
   );
+
+  updateProjectConfiguration(
+    tree,
+    schema.name,
+    {
+      root: libRoot,
+      targets: {
+        lint: {
+          executor: "@nrwl/linter:none"
+        }
+      }
+    }
+  )
 
   logger.info(
     `Hello, ${names(schema.name).className} attendees!! ${libRoot} ${__dirname}`
