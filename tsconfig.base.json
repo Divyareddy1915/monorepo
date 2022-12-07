@@ -19,6 +19,9 @@
       "@integrated-poc1/custom-lib-poc1": ["libs/custom-lib-poc1/src/index.ts"],
       "@integrated-poc1/data-access": ["libs/data-access/src/index.ts"],
       "@integrated-poc1/my-plugin": ["libs/my-plugin/src/index.ts"],
+      "@integrated-poc1/new-preset-plugin": [
+        "libs/new-preset-plugin/src/index.ts"
+      ],
       "@integrated-poc1/ui-header": ["libs/ui-header/src/index.ts"]
     }
   },

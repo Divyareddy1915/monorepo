@@ -3,18 +3,6 @@
   "version": "0.0.1",
   "main": "src/index.js",
   "generators": "./generators.json",
-  "executors": "./executors.json",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@Divyareddy1915"
-  },
-  "keywords": [],
-  "author": "",
-  "repository": {
-    "url": "git://github.com/Divyareddy1915/monorepo.git"
-  },
-  "license": "ISC"
+  "executors": "./executors.json"
 }
 
