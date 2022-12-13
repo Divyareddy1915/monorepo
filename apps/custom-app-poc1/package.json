@@ -1,0 +1,23 @@
+{
+    "name": "name",
+    "description": "description",
+    "authors": "author",
+    "version": "1.0.0",
+    "main": "pathToMain",
+    "dependencies": {},
+    "scripts": {
+        "test": "jest --coverage"
+    },
+    "nx": {
+        "targets": {
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["/coverage/{projectRoot}/apps/custom-app-poc1"],
+            "options": {
+              "jestConfig": "apps/custom-app-poc1/jest.config.ts",
+              "passWithNoTests": true
+            }
+          }
+        }
+    }
+}

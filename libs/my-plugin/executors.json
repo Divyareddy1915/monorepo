@@ -5,6 +5,11 @@
       "implementation": "./src/executors/echo/executor",
       "schema": "./src/executors/echo/schema.json",
       "description": "echoes the options to the console"
+    },
+    "echo1": {
+      "implementation": "./src/executors/echo1/executor",
+      "schema": "./src/executors/echo1/schema.json",
+      "description": "echo1 executor"
     }
   }
 }
