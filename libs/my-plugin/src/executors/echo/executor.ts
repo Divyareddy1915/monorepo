@@ -1,6 +1,6 @@
 import { EchoExecutorSchema } from './schema';
 
-export default async function runExecutor(
+export default async function echoExecutor(
   options: EchoExecutorSchema,
 ) {
   console.log('Executor ran for Echo---', options);

@@ -10,6 +10,11 @@
       "implementation": "./src/executors/echo1/executor",
       "schema": "./src/executors/echo1/schema.json",
       "description": "echo1 executor"
+    },
+    "chainable-executor": {
+      "implementation": "./src/executors/chainable-executor/executor",
+      "schema": "./src/executors/chainable-executor/schema.json",
+      "description": "chainable-executor executor"
     }
   }
 }

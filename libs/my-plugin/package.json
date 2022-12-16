@@ -1,5 +1,5 @@
 {
-  "name": "@Divyareddy1915/my-plugin",
+  "name": "@integrated-poc1/my-plugin",
   "version": "0.0.1",
   "main": "src/index.js",
   "generators": "./generators.json",

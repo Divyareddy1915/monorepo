@@ -4,6 +4,9 @@
   "sourceRoot": "apps/my-plans/src",
   "projectType": "application",
   "targets": {
+    "start": {
+      "executor": "./dist/libs/my-plugin:chainable-executor"
+    },
     "build": {
       "executor": "@nrwl/webpack:webpack",
       "outputs": ["{options.outputPath}"],

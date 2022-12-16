@@ -35,7 +35,7 @@ export default async function (tree: Tree, schema: InterfaceSchema) {
   //delete files generated through built in generators
   tree.delete(joinPathFragments(projectRoot, 'tsconfig.spec.json'));
 
-  await generateFiles(tree, joinPathFragments(__dirname, './files'), `${projectRoot}/components`, substitutions)
+  await generateFiles(tree, joinPathFragments(__dirname, './files'), `${projectRoot}`, substitutions)
   await formatFiles(tree);
   logger.info(`${__dirname} ${projectRoot} `)
 
